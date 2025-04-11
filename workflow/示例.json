@@ -1,0 +1,456 @@
+{
+  "last_node_id": 144,
+  "last_link_id": 194,
+  "nodes": [
+    {
+      "id": 116,
+      "type": "PreviewImage",
+      "pos": [
+        -264.6460266113281,
+        1341.4591064453125
+      ],
+      "size": [
+        307.3081970214844,
+        442.79937744140625
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "label": "图像",
+          "type": "IMAGE",
+          "link": 180
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 118,
+      "type": "PIP_CameraDevice",
+      "pos": [
+        -278.5617370605469,
+        1009.715087890625
+      ],
+      "size": [
+        315,
+        118
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "device_info",
+          "label": "device_info",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "index",
+          "label": "index",
+          "type": "INT",
+          "links": [
+            178
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "width",
+          "label": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "label": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PIP_CameraDevice",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 121,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        990.7256469726562,
+        1360.4996337890625
+      ],
+      "size": [
+        437.7846984863281,
+        565.3385009765625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "label": "图像",
+          "type": "IMAGE",
+          "link": 184
+        },
+        {
+          "name": "audio",
+          "label": "音频",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "meta_batch",
+          "label": "批次管理",
+          "type": "VHS_BatchManager",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "shape": 7,
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "label": "文件名",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "image/webp",
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00075.webp",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/webp",
+            "frame_rate": 8,
+            "workflow": "AnimateDiff_00075.png",
+            "fullpath": "C:\\COMFYUI\\ComfyUI_windows_portable\\ComfyUI\\output\\AnimateDiff_00075.webp"
+          }
+        }
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 134,
+      "type": "PIP_CameraStream",
+      "pos": [
+        104.37601470947266,
+        985.9476928710938
+      ],
+      "size": [
+        315,
+        246
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "camera_index",
+          "label": "camera_index",
+          "type": "INT",
+          "pos": [
+            10,
+            56
+          ],
+          "widget": {
+            "name": "camera_index"
+          },
+          "link": 178
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "label": "images",
+          "type": "IMAGE",
+          "links": [
+            180,
+            184,
+            193
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "label": "frame_count",
+          "type": "INT",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PIP_CameraStream",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        0,
+        640,
+        480,
+        16,
+        0.033,
+        "start",
+        1333864037,
+        "randomize"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 142,
+      "type": "PIP_VideoCombine",
+      "pos": [
+        106.88858032226562,
+        1356.587158203125
+      ],
+      "size": [
+        387.2537536621094,
+        535.9161376953125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "label": "images",
+          "type": "IMAGE",
+          "link": 193
+        }
+      ],
+      "outputs": [
+        {
+          "name": "last_image",
+          "label": "last_image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "frame_count",
+          "label": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "output_path",
+          "label": "output_path",
+          "type": "STRING",
+          "links": [
+            194
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PIP_VideoCombine",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        8,
+        0,
+        "PIP996",
+        "image/webp",
+        false,
+        true
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 143,
+      "type": "ShowText|pysssss",
+      "pos": [
+        606.3841552734375,
+        1372.2666015625
+      ],
+      "size": [
+        315,
+        112
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "label": "文本",
+          "type": "STRING",
+          "pos": [
+            10,
+            36
+          ],
+          "widget": {
+            "name": "text"
+          },
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "label": "字符串",
+          "type": "STRING",
+          "shape": 6,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss",
+        "ttNbgOverride": {
+          "color": "#332922",
+          "bgcolor": "#593930",
+          "groupcolor": "#b06634"
+        }
+      },
+      "widgets_values": [
+        "",
+        "C:\\COMFYUI\\ComfyUI_windows_portable\\ComfyUI\\output\\PIP996_00026.webp"
+      ],
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 144,
+      "type": "Note",
+      "pos": [
+        993.8167724609375,
+        1144.453857421875
+      ],
+      "size": [
+        210,
+        88
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "第一次执行有点慢很正常，设备在启动\n我写的合成视频节点不能预览想要预览也可以用这个"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      178,
+      118,
+      1,
+      134,
+      0,
+      "INT"
+    ],
+    [
+      180,
+      134,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      184,
+      134,
+      0,
+      121,
+      0,
+      "IMAGE"
+    ],
+    [
+      193,
+      134,
+      0,
+      142,
+      0,
+      "IMAGE"
+    ],
+    [
+      194,
+      142,
+      2,
+      143,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8769226950000009,
+      "offset": [
+        475.10939916343034,
+        -667.2115513887886
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-WanVideoWrapper": "721cd65e7b5224c70a3d20446d9d561f1732216b",
+      "comfy-core": "0.3.19",
+      "ComfyUI-VideoHelperSuite": "2c25b8b53835aaeb63f831b3137c705cf9f85dce"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": []
+  },
+  "version": 0.4
+}
