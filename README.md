@@ -32,6 +32,10 @@ https://github.com/user-attachments/assets/027d59bb-be6b-45a5-9f4b-4c0a6343ddd8
 
 ## 使用方法
 
+.\PIP-CameraStreamNode\workflow 有示例工作流
+
+输出是按帧数输出的，设置一次就可以了
+
 ### 摄像头设备节点
 
 1. 在工作流中添加"PIP 摄像头设备"节点
@@ -73,7 +77,5 @@ https://github.com/user-attachments/assets/027d59bb-be6b-45a5-9f4b-4c0a6343ddd8
 - numpy >= 1.20.0
 - Pillow >= 8.0.0
 
-## 许可证
 
-[添加您的许可证信息]
 
