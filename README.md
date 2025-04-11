@@ -2,6 +2,11 @@
 
 这是一个ComfyUI的自定义节点，用于将摄像头视频流集成到ComfyUI工作流中，并提供视频处理功能。
 
+![微信截图_20250411165830](https://github.com/user-attachments/assets/2df39cca-f2a2-43a0-9c98-fcf78add6e5b)
+
+
+
+
 ## 功能特点
 
 - **摄像头设备节点**：允许列出并选择可用的摄像头设备
